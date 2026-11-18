@@ -1,0 +1,15 @@
+{
+  "restaurant_name": "Coastal Café",
+  "currency": "₹",
+  "low_stock_threshold": 5,
+  "seed_menu": [
+    {"category": "Starters", "name": "Prawn Rissois", "description": "Goan-style prawn turnovers, crisp and golden", "price_paise": 28000, "veg": 0, "stock": 12, "sort_order": 10},
+    {"category": "Starters", "name": "Mushroom Xacuti Bites", "description": "Roasted coconut and spice", "price_paise": 22000, "veg": 1, "stock": null, "sort_order": 11},
+    {"category": "Mains", "name": "Goan Fish Thali", "description": "Fried kingfish, curry, rice, solkadi, pickle", "price_paise": 42000, "veg": 0, "stock": 8, "sort_order": 20},
+    {"category": "Mains", "name": "Chicken Cafreal", "description": "Green masala chicken with pão", "price_paise": 38000, "veg": 0, "stock": 15, "sort_order": 21},
+    {"category": "Mains", "name": "Veg Sorpotel Bowl", "description": "Slow-cooked spiced vegetables with rice", "price_paise": 30000, "veg": 1, "stock": null, "sort_order": 22},
+    {"category": "Desserts", "name": "Bebinca", "description": "Layered coconut and egg-yolk cake", "price_paise": 18000, "veg": 0, "stock": 6, "sort_order": 30},
+    {"category": "Drinks", "name": "Filter Coffee", "description": "South Indian style, strong and sweet", "price_paise": 8000, "veg": 1, "stock": null, "sort_order": 40},
+    {"category": "Drinks", "name": "Fresh Lime Soda", "description": "Sweet, salted or mixed", "price_paise": 9000, "veg": 1, "stock": null, "sort_order": 41}
+  ]
+}

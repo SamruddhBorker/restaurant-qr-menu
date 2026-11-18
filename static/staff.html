@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Staff</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Staff</h1>
+    <div class="row noprint"><a href="/">View customer menu</a>
+      <button class="ghost hidden" id="logout">Sign out</button></div>
+  </header>
+
+  <section class="card" id="loginCard">
+    <h2>Sign in</h2>
+    <form id="loginForm">
+      <label for="pin">Staff PIN</label>
+      <input id="pin" type="password" inputmode="numeric" autocomplete="current-password">
+      <div class="row"><button>Sign in</button></div>
+      <div class="msg" id="loginMsg"></div>
+    </form>
+  </section>
+
+  <div id="app" class="hidden">
+    <section class="card noprint">
+      <h2>Stock</h2>
+      <div class="sub">Blank stock = unlimited. Tap "−1 sold" after each order; the customer menu updates within seconds.</div>
+      <div id="list"></div>
+      <div class="msg" id="listMsg"></div>
+    </section>
+
+    <section class="card noprint">
+      <h2 id="formTitle">Add item</h2>
+      <form id="itemForm">
+        <label for="fName">Name</label><input id="fName" type="text" maxlength="80" required>
+        <label for="fCat">Category</label><input id="fCat" type="text" maxlength="40" required placeholder="Starters, Mains, Drinks…">
+        <label for="fDesc">Description</label><input id="fDesc" type="text" maxlength="200">
+        <div class="row">
+          <div><label for="fPrice">Price</label><input id="fPrice" type="number" min="0" step="0.5" required></div>
+          <div><label for="fStock">Stock (blank = unlimited)</label><input id="fStock" type="number" min="0" max="9999"></div>
+          <div><label for="fOrder">Sort order</label><input id="fOrder" type="number" value="0"></div>
+        </div>
+        <label><input id="fVeg" type="checkbox"> Vegetarian</label>
+        <div class="row"><button id="fSubmit">Add item</button>
+          <button type="button" class="ghost hidden" id="fCancel">Cancel edit</button></div>
+        <div class="msg" id="formMsg"></div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2 class="noprint">Table QR codes</h2>
+      <div class="noprint">
+        <label for="qBase">Menu web address (what customers' phones will open)</label>
+        <input id="qBase" type="text">
+        <div class="warn hidden" id="qWarn">This address only works on this computer. Use the address your phones can reach, such as http://192.168.x.x:8000 on your Wi-Fi, or your public https address.</div>
+        <label for="qTables">Number of tables</label>
+        <input id="qTables" type="number" min="1" max="60" value="10">
+        <div class="row"><button id="qGo">Generate</button>
+          <button class="ghost" id="qPrint">Print</button></div>
+        <div class="msg" id="qMsg"></div>
+      </div>
+      <div class="grid" id="qGrid"></div>
+    </section>
+  </div>
+</div>
+<script src="/staff.js"></script>
+</body>
+</html>
